@@ -2,14 +2,6 @@ import {View,Image} from 'react-native';
 import Splashscrn from './Splashscrn';
 import { useEffect, useState } from 'react';
 
-// const [data,setdata]=useState(data)
-
-
-
-// setTimeout(()=>{
-//    this.props.navigation.navigate(Splashscrn),3000
-// });
-
 
 export default function Logoscrn({navigation}){
 

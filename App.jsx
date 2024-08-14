@@ -6,6 +6,7 @@ import Splashscrn from './compunents/Splashscrn';
 import Loginscreen from './compunents/Loginscreen';
 import Otpscreen from './compunents/Otpscreen';
 import Setpin from './compunents/Setpin';
+import CarouselTask from './compunents/carousel_task';
 
 
 const Stack = createNativeStackNavigator();
@@ -13,13 +14,15 @@ const Stack = createNativeStackNavigator();
 export default  App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Logo'>
+      <Stack.Navigator initialRouteName='CarouselTask'>
         <Stack.Screen
           name="Onboarding"
           component={Splashscrn}
           options={{headerShown:false}}
         />
         <Stack.Screen name="Logo" component={Logoscrn}
+           options={{headerShown:false}} />
+        <Stack.Screen name="CarouselTask" component={CarouselTask}
            options={{headerShown:false}} />
            <Stack.Screen name="Loginscreen" component={Loginscreen}
            options={{headerShown:false}} />

@@ -8,7 +8,11 @@ import {
 } from "react-native";
 import BackBtn from "./utils/custom_backbtn";
 import MyButton from "./utils/custom_button";
+import { useState } from "react";
 export default function Setpin({navigation}) {
+
+  const[passwordVisible,setPasswordVisible]=useState(true)
+
   return (
     <View style={styles.container}>
       <BackBtn
@@ -23,14 +27,14 @@ export default function Setpin({navigation}) {
       <View style={styles.textcontent1}>
         
         <Text style={{ color: "darkblue", fontSize: 15, marginLeft: 8, }}>
-         Enter PIN
+         Enter PINs
         </Text>
-        <TextInput style={styles.intertext} />
+        <TextInput
+        secureTextEntry ={passwordVisible}
+        style={{...styles.intertext}} />
       </View>
       <View
         style={{ flexDirection: "row", marginTop: 15 }}>
- 
-       
         <Text
           style={{
             color: "black",
@@ -45,7 +49,14 @@ export default function Setpin({navigation}) {
       </View>
       <View style={{height:"40%",width:"100%",justifyContent:"flex-end"}}>
         <MyButton title="Confirm"
-        onPress={()=>{ navigation.navigate("Loginscreen")}}/>
+       
+        onPress={()=>{ 
+
+          setPasswordVisible(!passwordVisible);
+          // secureTextEntry ={secureTextEntry}
+          // setsecureTextEntry(false)
+          // navigation.navigate("Loginscreen")
+          }}/>
       </View>
     </View>
   );
