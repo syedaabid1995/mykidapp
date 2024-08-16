@@ -8,7 +8,6 @@ import Otpscreen from './compunents/Otpscreen';
 import Setpin from './compunents/Setpin';
 import CarouselTask from './compunents/carousel_task';
 
-
 const Stack = createNativeStackNavigator();
 
 export default  App = () => {
