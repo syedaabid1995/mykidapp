@@ -10,8 +10,10 @@ export default function CarouselTask() {
         const newIndex = event.nativeEvent.position;
         setCurrentIndex(newIndex);
     };
-    const images = [require('./assets/kids1.png'),
-        require('./assets/kids2.jpg'),require('./assets/kids3.png')]
+    const images = [{key: 1, value:  require('./assets/kids1.png')},
+        {key: 2, value:  require('./assets/kids2.jpg')},
+        {key: 3, value:  require('./assets/kids3.png')}
+    ]
        
         
             return  (
@@ -22,20 +24,20 @@ export default function CarouselTask() {
                     onPageSelected={handlePageChange}
                     ref={pagerRef}
                 >
-                    {images.map((image, index) => (
+                    {images.map((item, index) => (
                         <View key={index} style={styles.page}>
                             <Image
                                 resizeMode="contain"
                                 style={styles.image}
-                                source={image}
+                                source={item.value}
                             />
                         </View>
                     ))}
                 </PagerView>
                 <View style={styles.dotsContainer}>
-                {images.map((_, index) => (
+                {images.map((item, index) => (
                     <View
-                        key={index}
+                        key={item.key}
                         style={[
                             styles.dot,
                             { width: currentIndex === index ? 50 : 10 }
