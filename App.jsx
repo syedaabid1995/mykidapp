@@ -13,7 +13,7 @@ const Stack = createNativeStackNavigator();
 export default  App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='CarouselTask'>
+      <Stack.Navigator initialRouteName='Logo'>
         <Stack.Screen
           name="Onboarding"
           component={Splashscrn}
