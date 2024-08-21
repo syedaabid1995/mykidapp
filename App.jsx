@@ -8,13 +8,14 @@ import Otpscreen from './compunents/Otpscreen';
 import Setpin from './compunents/Setpin';
 import CarouselTask from './compunents/carousel_task';
 import Dashboard from './compunents/dashboard/dashboard';
+import App1 from './compunents/dashboard/app1'
 
 const Stack = createNativeStackNavigator();
 
 export default  App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Dashboard'>
+      <Stack.Navigator initialRouteName='App1'>
         <Stack.Screen
           name="Onboarding"
           component={Splashscrn}
@@ -30,7 +31,7 @@ export default  App = () => {
            options={{headerShown:false}} />
             <Stack.Screen name="Setpin" component={Setpin}
            options={{headerShown:false}} />
-           <Stack.Screen name="Dashboard" component={Dashboard}
+           <Stack.Screen name="App1" component={App1}
            options={{headerShown:false}} />
       </Stack.Navigator>
     </NavigationContainer>
