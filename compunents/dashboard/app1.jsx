@@ -7,7 +7,7 @@ const Tab = createBottomTabNavigator();
 
 export default function App1({navigation}) {
   return (
-    <Tab.Navigator initialRouteName='Dashboard'>
+    <Tab.Navigator>
       <Tab.Screen name="Dashboard"  component={Dashboard} options={{headerShown:false}}/>
       <Tab.Screen name="Calendar" component={Calendar} options={{headerShown:false}}/>
       <Tab.Screen name="Home" component={Home} options={{headerShown:false}}/>

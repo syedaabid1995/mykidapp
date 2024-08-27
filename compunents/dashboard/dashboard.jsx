@@ -14,7 +14,7 @@ import { useState,useRef } from "react";
 import PagerView from 'react-native-pager-view';
   
   export default function Dashboard({navigation}) {
-    const [currentIndex, setCurrentIndex] = useState(1);
+    const [currentIndex, setCurrentIndex] = useState(0);
     const pagerRef = useRef(null);
 
     const handlePageChange = (event) => {
@@ -108,7 +108,7 @@ placeholderTextColor={"skyblue"}
                         key={item.id}
                         style={[
                             styles.dot,
-                            { width: currentIndex === index ? 40 : 20 }
+                            { width: currentIndex === index ? 45 : 20 }
                         ]}
                     />
                 ))}
